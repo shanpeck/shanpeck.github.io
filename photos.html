@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Bootstrap Website</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <title>Photos - Bootstrap</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <h1>Photos</h1>
+        </header>
+        <!--Navigation Menu-->
+        <body>
+            <div class="sidebar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="photos.html" class="active">Photos</a></li>
+                    <li><a href="bio.html">Bio</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank" class="text-light mr-2"><i class="fab fa-facebook fa-2x"></i></a>
+                    <a href="https://instagram.com" target="_blank" class="text-light mr-2"><i class="fab fa-instagram fa-2x"></i></a>
+                    <a href="https://twitter.com" target="_blank" class="text-light"><i class="fab fa-twitter fa-2x"></i></a>
+                </div>
+            </div>
+            
+            <div class="content">
+                <div class="container mt-4" id="photos">
+                    <div class="row gallery">
+                        <div class="col-4"><img src="UI1.jpg" data-toggle="modal" data-target="#imageModal"></div>
+                        <div class="col-4"><img src="UI2.jpg" data-toggle="modal" data-target="#imageModal"></div>
+                        <div class="col-4"><img src="UI6.jpg" data-toggle="modal" data-target="#imageModal"></div>
+                        <div class="col-4"><img src="UI4.jpg" data-toggle="modal" data-target="#imageModal"></div>
+                        <div class="col-4"><img src="UI5.jpg" data-toggle="modal" data-target="#imageModal"></div>
+                        <div class="col-4"><img src="UI3.png" data-toggle="modal" data-target="#imageModal"></div>
+                        <div class="col-4"><img src="UI7.jpg" data-toggle="modal" data-target="#imageModal"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="modal fade" id="imageModal" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body text-center">
+                            <img id="modalImage" src="" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+            <script>
+                $('.gallery img').on('click', function() {
+                    $('#modalImage').attr('src', $(this).attr('src'));
+                });
+            </script>
+        </body>
+        </html>

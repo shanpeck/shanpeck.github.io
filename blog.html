@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Bootstrap Website</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <title>Blog - Bootstrap</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <h1>Blog</h1>
+        </header>
+        <!--Navigation Menu-->
+        <body>
+            <div class="sidebar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="photos.html">Photos</a></li>
+                    <li><a href="bio.html">Bio</a></li>
+                    <li><a href="blog.html" class="active">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank" class="text-light mr-2"><i class="fab fa-facebook fa-2x"></i></a>
+                    <a href="https://instagram.com" target="_blank" class="text-light mr-2"><i class="fab fa-instagram fa-2x"></i></a>
+                    <a href="https://twitter.com" target="_blank" class="text-light"><i class="fab fa-twitter fa-2x"></i></a>
+                </div>
+            </div>
+            <div class="content">
+                <div class="container-lg" id="photos">
+                    <div class="row gallery">
+                        <div class="col-md-5 mx-auto text-center">
+                            <img src="Brulee.jpg" data-toggle="modal" data-target="#imageModal">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="modal fade" id="imageModal" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body text-center">
+                            <img id="modalImage" src="" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+            <script>
+                $('.gallery img').on('click', function() {
+                    $('#modalImage').attr('src', $(this).attr('src'));
+                });
+            </script>
+            <section>
+                <div class="text">
+                    <h2>How to Make Crème Brûlée</h2>
+                    <p>You'll find the full, step-by-step recipe below — but here's a brief overview of what you can expect when you make this top-rated crème brûlée:</p>
+                    <ol>
+                        <li>Make the custard: Whisk the egg yolks, sugar, and vanilla in a bowl. Heat the cream until it's almost boiling, then whisk the cream into the egg mixture. Pour the mixture into a double boiler and stir over simmering water until thick.</li>
+                        <li>Bake and chill the custard: Pour the mixture into crème brûlée dishes or ramekins. Bake in a preheated oven until set. Cool to room temperature, then chill in the fridge.</li>
+                        <li>Caramelize the sugar: Sprinkle each custard with a blend of brown and white sugars. Place under your oven's broiler until the sugar is melted and caramelized. Chill before serving.</li>
+                    </ol>
+                </div>
+            </section>
+        </body>
+        </html>
